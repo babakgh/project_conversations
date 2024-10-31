@@ -1,0 +1,28 @@
+version: "3"
+services:
+  db:
+    image: postgres:14
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    environment:
+      POSTGRES_USER: user
+      POSTGRES_PASSWORD: password
+      POSTGRES_DB: project_conversations
+    ports:
+      - "5432:5432"
+
+  web:
+    build: .
+    volumes:
+      - .:/app
+    ports:
+      - "3000:3000"
+    depends_on:
+      - db
+    environment:
+      DATABASE_URL: postgres://user:password@db:5432/project_conversations
+      RAILS_ENV: development
+      BINDING: 0.0.0.0 # Add this line to ensure proper binding
+
+volumes:
+  postgres_data:
