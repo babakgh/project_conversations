@@ -1,0 +1,16 @@
+.bg-white.rounded.shadow
+  .px-4.py-5.sm:px-6
+    h1.text-2xl.font-bold Projects
+
+  .border-t.border-gray-200
+    ul.divide-y.divide-gray-200
+      - @projects.each do |project|
+        li
+          = link_to project_path(project), class: 'block hover:bg-gray-50'
+            .px-4.py-4.sm:px-6
+              .flex.items-center.justify-between
+                .flex.items-center
+                  .text-lg.font-medium.text-blue-600 = project.name
+                .flex.items-center
+                  span.px-2.inline-flex.text-xs.leading-5.font-semibold.rounded-full class=status_color(project.status)
+                    = project.status.humanize
