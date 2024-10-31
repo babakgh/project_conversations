@@ -7,3 +7,13 @@
 #   ["Action", "Comedy", "Drama", "Horror"].each do |genre_name|
 #     MovieGenre.find_or_create_by!(name: genre_name)
 #   end
+default_users = [
+  { name: 'babak' },
+  { name: 'john' },
+]
+
+default_users.each do |user_attributes|
+  User.create!(user_attributes)
+end
+
+puts "Created #{User.count} users"
