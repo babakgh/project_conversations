@@ -1,9 +1,7 @@
 # Projec Conversations
-
 A simple Rails 7 project for tracking project statuses and their history.
 
 ## Development Notes
-
 To complete this assessment within the 3-hour time limit, several strategic decisions were made to prioritize core functionality while maintaining code quality.
 
 ### Implemented Features
@@ -18,59 +16,23 @@ To complete this assessment within the 3-hour time limit, several strategic deci
 * Tailwind CSS for styling
 
 ### Strategic Simplifications
-1. Authentication
-   * Username-only authentication without passwords
-   * No user registration - using seeded users
-   * Skipped authorization layers
-   * No remember me functionality
-
-2. Project Management
-   * Read-only project entities (no creation/updates)
-   * Focus on status changes only
-   * Basic comment functionality
-   * No file attachments or rich text
-
-3. Testing
-   * Skipped unit tests
-   * Skipped integration tests
-   * No automated UI tests
-   * Manual testing of core functionality
-
-4. Code Quality
-   * Skipped static code analysis (Rubocop, Reek)
-   * No code documentation tools
-   * Basic Git commit messages
-   * Minimal comments in code
-
-5. Frontend
-   * Minimal JavaScript
-   * Basic Tailwind styling
-   * No custom CSS
-   * Limited responsive design
-
-6. Rails Configuration
-   * Kept default middleware
-   * Standard Rails structure
-   * No custom configurations
-   * Default gem settings
-
-### Technical Decisions
-* Used ViewComponents for reusability
-* Implemented basic activity tracking
-* Focused on core data models
-* Maintained REST principles
-* Used Rails conventions
+* Username-only authentication (no passwords/registration)
+* Pre-seeded users and projects
+* Status changes and comments only - no project creation/editing
+* No file attachments or rich text
+* Skipped test suite implementation
+* No code analysis tools (Rubocop, Reek)
+* Minimal frontend work and styling
+* Standard Rails configuration
+* Basic Git commit messages
 
 ### Conclusion
 This implementation demonstrates the core functionality while maintaining code quality within the time constraint. The decisions made allow for future expansion while providing a solid foundation for the basic requirements.
-Last edited just now
 
 ## Prerequisites
-
 - Docker
 
 ## Starting the Application
-
 To start the application, follow these steps:
 
 1. Clone the repository:
